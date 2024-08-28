@@ -3,14 +3,13 @@ const chatContainer = document.querySelector(".chat-list");
 const suggestions = document.querySelectorAll(".suggestion");
 const toggleThemeButton = document.querySelector("#theme-toggle-button");
 const deleteChatButton = document.querySelector("#delete-chat-button");
-require('dotenv').config();
 
 // State variables
 let userMessage = null;
 let isResponseGenerating = false;
 
 // API configuration
-const API_KEY = process.env.API_KEY; // Your API key here
+const API_KEY = "AIzaSyCCS7MGiScjxVjwXULx1vq-FYEds5wrz2o"; // Your API key here
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
 
 // Load theme and chat data from local storage on page load
